@@ -4,4 +4,4 @@ x  = linspace(1, 10);
 yx = y(p,x) + 0.1*(rand(size(x))-0.5);
 OLS = @(b) sum((y(b,x) - yx).^2);          % Ordinary Least Squares cost function
 opts = optimset('MaxFunEvals',50000, 'MaxIter',10000);
-B = fminsearch(OLS, rand(2,1), opts)       % Use ‘fminsearch’ to minimise the ‘OLS’ function
+B = fminsearch(OLS, rand(2,1), opts)       % Use â€˜fminsearchâ€™ to minimise the â€˜OLSâ€™ function
